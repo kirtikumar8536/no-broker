@@ -24,9 +24,9 @@ public class UserService {
         user.setEmailVerified(true);
         userRepository.save(user);
     }
-//    public boolean isEmailVerified(String email){
-//        User user = userRepository.findByEmail(email);
-//        return user!=null && user.isEmailVerified();
-//
-//    }
+    public boolean isEmailVerified(String email){//called from Emailverification
+        User user = userRepository.findByEmail(email);
+        return user!=null && user.isEmailVerified();
+
+    }
 }
